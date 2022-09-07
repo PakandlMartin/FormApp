@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <header>
+          <h1>Welcome to our example form app!</h1>
+          <p>Please use the register form</p>
+        </header>
+
+        <form>
+          <input class="userName" type="text" placeholder="Enter username..." />
+
+          <p class="userNameWarning">
+            Enter value between 4 and 64 characters!
+          </p>
+
+          <input
+            class="password"
+            type="password"
+            placeholder="Enter password..."
+          />
+
+          <p class="passwordWarningLengthVal">
+            Enter value between 8 and 64 characters!
+          </p>
+
+          <p class="passwordWarningChararactersVal">
+            Your password must have at least 1 upper case and 1 special
+            character!
+          </p>
+
+          <input
+            class="passwordConfirm"
+            type="password"
+            placeholder="Confirm password..."
+          />
+
+          <p class="passwordConfirmWarning">Values are not equal!</p>
+
+          <input class="email" type="email" placeholder="Enter e-mail..." />
+
+          <p class="emailConfirmWarning">Enter valid value!</p>
+
+          <input class="date" type="date" />
+
+          <p class="dateConfirmWarning">Enter valid date!</p>
+          <br />
+          <br />
+          <button class="btnRegister">REGISTER</button>
+        </form>
+
+        <section class="UserList">
+          <h2>User List</h2>
+          <div class="flex-center">
+            <div class="userListCard">
+              <p class="userListCardParagraph">Empty</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
