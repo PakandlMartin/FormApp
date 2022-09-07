@@ -1,0 +1,120 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+main {
+    max-width: 800px ;
+}
+
+header > p {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    width: 60%;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+form > p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    display: block;
+}
+
+input {
+    width: 95%;
+    border: solid rgb(199, 190, 190) 0.5px;
+    padding: 10px;
+    border-radius: 8px;
+    outline: rgb(139, 139, 180) solid 0.1px;
+    cursor: pointer;
+    margin-top: 15px ;
+}
+
+button {
+    background-color: #52b6e8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    margin: auto auto;
+    border-radius: 5px;
+}
+
+
+
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userListCard {
+    min-width: 400px;
+    max-width: 400px;
+    color: rgb(139, 139, 180);
+    text-align: center;
+    border: rgb(139, 139, 180) solid 0.5px;
+border-radius: 5px;
+padding-top: 20px;
+padding-bottom: 20px;
+width: 60%;
+
+}
+
+.userNameWarning {
+    display: none;
+}
+
+.passwordWarningLengthVal {
+    display: none;
+}
+
+.passwordWarningChararactersVal {
+    display: none;
+}
+
+.passwordConfirmWarning {
+    display: none;
+}
+
+.emailConfirmWarning {
+    display: none;
+}
+
+.dateConfirmWarning {
+    display: none;
+}
