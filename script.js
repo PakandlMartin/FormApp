@@ -76,7 +76,7 @@ const validatepasswordInput = () => {
   user.password = passwordInput.value;
 };
 
-// VALIDACE STEJNÉ HODNOSTI HESEL
+// VALIDACE STEJNÉ HODNOTY U OBOU HESEL
 const confirmPasswordInput = () => {
   if (passwordConfirmInput.value === user.password) {
     user.passwordValidConfirm = true;
