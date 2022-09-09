@@ -13,7 +13,7 @@ const validationFunc = (value, regex) => {
 };
 
 // OBJEKT UŽIVATELE - JSOU ZDE ÚKLÁDÁNY JENDOTLIVÉ INFOMRACE Z FORMULÁŘE
-let user = {
+const user = {
   userName: "",
   password: "",
   passwordValid: false,
@@ -76,12 +76,13 @@ const validatepasswordInput = () => {
   user.password = passwordInput.value;
 };
 
-// VALIDACE STEJNÉ HODNOTY U OBOU HESEL
+// VALIDACE STEJNÉ HODNOSTI HESEL
 const confirmPasswordInput = () => {
   if (passwordConfirmInput.value === user.password) {
     user.passwordValidConfirm = true;
     document.querySelector(".passwordConfirmWarning").style.display = "none";
   } else {
+    user.passwordValidConfirm = false;
     document.querySelector(".passwordConfirmWarning").style.display = "block";
   }
 };
@@ -96,6 +97,7 @@ const confirmEmail = () => {
 
   if (!mailConfirm) {
     document.querySelector(".emailConfirmWarning").style.display = "block";
+    user.passwordValidConfirm = false;
   } else {
     document.querySelector(".emailConfirmWarning").style.display = "none";
     user.email = emailInput.value;
@@ -104,7 +106,6 @@ const confirmEmail = () => {
 
 // VALIDACE DATA
 const validatedateInput = () => {
-  user.date = dateInput.value;
   if (dateInput.value) {
     document.querySelector(".dateConfirmWarning").style.display = "none";
   } else {
@@ -151,11 +152,6 @@ registerBtn.addEventListener("click", (event) => {
   confirmPasswordInput();
   confirmEmail();
   validatedateInput();
-  
-  // POKUD NEJSOU INFORMACE VALIDNÍ, VYMAŽE INFORMACE Z OBJEKTU UŽIVATELE
-if (!userValidateInfo()) {
-    clearInputs();
-}
 
   // POKUD JSOU VŠECHNY INFORMACE VALIDNÍ, VYČISTÍ INPUTY A UKÁŽE INFORMACE O UŽIVATELI
   if (userValidateInfo()) {
