@@ -13,7 +13,7 @@ const validationFunc = (value, regex) => {
 };
 
 // OBJEKT UŽIVATELE - JSOU ZDE ÚKLÁDÁNY JENDOTLIVÉ INFOMRACE Z FORMULÁŘE
-const user = {
+let user = {
   userName: "",
   password: "",
   passwordValid: false,
@@ -151,6 +151,16 @@ registerBtn.addEventListener("click", (event) => {
   confirmPasswordInput();
   confirmEmail();
   validatedateInput();
+  
+  // VYČISTÍ OBJEKT UŽIVATELE
+  user = {
+  userName: "",
+  password: "",
+  passwordValid: false,
+  passwordValidConfirm: false,
+  email: "",
+  date: "",
+};
 
   // POKUD JSOU VŠECHNY INFORMACE VALIDNÍ, VYČISTÍ INPUTY A UKÁŽE INFORMACE O UŽIVATELI
   if (userValidateInfo()) {
