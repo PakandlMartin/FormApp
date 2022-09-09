@@ -152,7 +152,7 @@ registerBtn.addEventListener("click", (event) => {
   confirmEmail();
   validatedateInput();
   
-  // POKUD NEJSOU INFORMACE VALIDNÍ, VYČISTÍ INPUTY
+  // POKUD NEJSOU INFORMACE VALIDNÍ, VYMAŽE INFORMACE Z OBJEKTU UŽIVATELE
 if (!userValidateInfo()) {
     clearInputs();
 }
