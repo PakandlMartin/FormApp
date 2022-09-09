@@ -152,15 +152,10 @@ registerBtn.addEventListener("click", (event) => {
   confirmEmail();
   validatedateInput();
   
-  // VYČISTÍ OBJEKT UŽIVATELE
-  user = {
-  userName: "",
-  password: "",
-  passwordValid: false,
-  passwordValidConfirm: false,
-  email: "",
-  date: "",
-};
+  // POKUD NEJSOU INFORMACE VALIDNÍ, VYČISTÍ INPUTY
+if (!userValidateInfo()) {
+    clearInputs();
+}
 
   // POKUD JSOU VŠECHNY INFORMACE VALIDNÍ, VYČISTÍ INPUTY A UKÁŽE INFORMACE O UŽIVATELI
   if (userValidateInfo()) {
